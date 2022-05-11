@@ -1,0 +1,12 @@
+.bars {
+    margin:auto;
+    width: 20%;
+    border: solid 3px black;
+}
+.bars>* {
+    height: 40%;
+    background-color: rgb(102, 102, 252);
+}
+.bars>*:not(:last-child) {
+    border-bottom: 10px dotted black;
+}

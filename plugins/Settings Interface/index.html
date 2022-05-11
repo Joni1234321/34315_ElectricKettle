@@ -1,0 +1,53 @@
+<html>
+<head>
+
+  <!-- 
+  
+  NOTE: This plugin will not be visible on public views of a channel. 
+        If you intend to make your channel public, consider using the
+        MATLAB Visualization App to create your visualizations.
+  
+  -->  
+
+  %%PLUGIN_CSS%%
+  %%PLUGIN_JAVASCRIPT%%
+  
+</head>
+
+<body onload="start()">
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+    <div id="intermission">
+            UPDATING... PLEASE WAIT
+            <br>
+            THIS TAKES 15 SECONDS
+    </div>
+
+    <form action="https://api.thingspeak.com/update" method="GET" target="dummyframe">
+
+        <h4>Temperature Goal [20 - 50] </h4>
+        <div class="wrapper">
+            <div>
+                <input type="range" min="20" max="50" id="tempgoal" name="field3" value="27"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output id="tempval">42 degrees</output>
+            </div>
+            <p id="curr-tempgoal"></p>
+        </div>
+        <h4>Humidity Goal [0% - 100%] </h4>
+        <div class="wrapper">
+            <div>
+                <input type="range" min="0" max="100" id="humidgoal" name="field4" value="50"
+                    oninput="this.nextElementSibling.value = this.value + '%'">
+                <output id="humidval">42%</output>
+            </div>
+            <p id="curr-humidgoal"></p>
+        </div>
+
+        <input type="hidden" name="api_key" value="FQ66IP0HBCBOI1EE">
+        <input type="submit" value="Update" onclick="reload();">
+
+    </form>
+
+
+</body>
+</html>
