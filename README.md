@@ -5,7 +5,7 @@ Project for course 34315 (https://kurser.dtu.dk/course/34315)
 # What is this
 Temperature and humidity controller for terrariums.
 # Folders
-Arduinokode -> The code on our two ESP8266 
+Arduinokode -> The code on our two ESP8266  
 Plugins -> The code for the plugins we use on ThingSpeak
 # ThingSpeak Interface
 We use ThingSpeak as an interface (we also store and read data from there)
